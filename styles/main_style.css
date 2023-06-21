@@ -1,0 +1,98 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* default font and background color */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+
+}
+
+/* header and navigation */
+header {
+  background-color: black;
+  color: #fff;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li {
+  margin-right: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 5rem;
+    padding: 1rem 2rem;
+}
+
+nav ul li:last-child {
+  margin-right: 5rem;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+}
+
+/* Style hero section */
+#hero {
+    background-image: url('../imgs/4k-3213659.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 4px 4px 4px #333;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+#hero p {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  max-width: 40rem;
+}
+
+
+.btn {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #333;
+}
+
+/* Style footer */
+footer {
+  background-color: black;
+  color: #fff;
+  padding: 1.45rem;
+  text-align: center;
+}
