@@ -1,98 +1,101 @@
-/* Reset default styles */
-* {
-  margin: 0;
-  padding: 0;
+body{
+    background-color: #333333;
+    overflow-x: hidden;
 }
 
-/* default font and background color */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-
-}
-
-/* header and navigation */
 header {
-  background-color: black;
-  color: #fff;
-  padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.personal-info {
+    position: relative;
+    width: 100%;
+}
+
+#my-name {
+    position:absolute;
+    color: #ffe066;
+    font-size: 5vw;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 10%;
+    margin-left: 20%;
+    transform: translate(10%, 0%);
+    z-index: 2;
+}
+
+#my-img {
+    position: absolute;
+    height: auto;
+    width: 50%;
+    margin-left:50%;
+    margin-top: 6%;
+    border-radius: 70%;
+    z-index: 1;
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-}
-
-nav ul li {
-  margin-right: 1rem;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    margin-left: 5rem;
-    padding: 1rem 2rem;
-}
-
-nav ul li:last-child {
-  margin-right: 5rem;
-}
-
-nav ul li a:hover {
-    background-color: #333;
-}
-
-/* Style hero section */
-#hero {
-    background-image: url('../imgs/4k-3213659.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
+    list-style-type: none;
+    margin: 20px;
+    padding: 0;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    text-shadow: 4px 4px 4px #333;
+    gap: 25%;
 }
 
-#hero h1 {
-    font-size: 4rem;
-    margin-bottom: 2rem;
-}
-#hero p {
-  font-size: 1.5rem;
-  margin-bottom: 3rem;
-  max-width: 40rem;
+nav li {
+    display: inline;
+    margin-right: 20px; /* Adjust this value as needed for spacing */
 }
 
-
-.btn {
+nav a {
+    color: #808080;
     text-decoration: none;
-    background-color: black;
-    color: white;
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.btn:hover {
-  background-color: #333;
-  color: #fff;
-}
-.btn:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px #333;
+    font-size: 2vw;
 }
 
-/* Style footer */
-footer {
-  background-color: black;
-  color: #fff;
-  padding: 1.45rem;
-  text-align: center;
+nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.about-me-info p {
+    margin-top: 10%;
+    margin-left: 15%;
+    color: white;
+}
+
+#title {
+    color: #ffe066;
+    font-size: 3vw;
+    transform: translateX(-5%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#slogan {
+    font-size: 1.5vw;
+}
+
+.about-me-container {
+    background-color: #0d0d0d;
+    width: 110%;
+    margin-top: 5%;
+    transform: translateX(-5%);
+}
+
+.about-me {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    color: white;
+}
+
+#about-me-title{
+    font-size: 2vw;
+}
+
+#about-me-content {
+    font-size: 1.2vw;
 }
