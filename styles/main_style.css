@@ -1,5 +1,5 @@
 body{
-    background-color: #333333;
+    background-color: #333647;
     overflow-x: hidden;
 }
 
@@ -14,46 +14,65 @@ header {
 }
 
 #my-name {
-    position:absolute;
-    color: #ffe066;
-    font-size: 5vw;
+    position: absolute;
+    z-index: 2;
+    color: #fec160;
+    font-size: 72px;
     font-family: Arial, sans-serif;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-top: 10%;
     margin-left: 20%;
     transform: translate(10%, 0%);
-    z-index: 2;
+    opacity: 0;
+    transform: translateX(-20%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+#my-name.in-focus {
+    opacity: 1;
+    transform: translateX(10%);
 }
 
 #my-img {
-    position: absolute;
+    position: relative;
     height: auto;
+    min-width: 300px;
     width: 50%;
     margin-left:50%;
     margin-top: 6%;
     border-radius: 70%;
     z-index: 1;
+    opacity: 0;
+    transform: translateY(10%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    mix-blend-mode: luminosity;
+}
+#my-img.in-focus {
+    opacity: 1;
+    transform: translateY(-2%);
 }
 
 nav ul {
+    position: relative;
     list-style-type: none;
     margin: 20px;
     padding: 0;
     display: flex;
     justify-content: center;
     gap: 25%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
 
 nav li {
     display: inline;
-    margin-right: 20px; /* Adjust this value as needed for spacing */
 }
 
 nav a {
     color: #808080;
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 24px;
 }
 
 nav a:hover {
@@ -61,41 +80,139 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.about-me-info p {
+.some-info p {
+    position: relative;
     margin-top: 10%;
     margin-left: 15%;
     color: white;
+    z-index: 2;
 }
 
 #title {
-    color: #ffe066;
-    font-size: 3vw;
-    transform: translateX(-5%);
+    position: relative;
+    color: #fec160;
+    font-size: 48px;
+    z-index: 2;
+    margin-top: 10%;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateX(15%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+#title.in-focus {
+    opacity: 1;
+    transform: translateX(10%);
 }
 
 #slogan {
-    font-size: 1.5vw;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateX(15%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
-.about-me-container {
-    background-color: #0d0d0d;
-    width: 110%;
-    margin-top: 5%;
-    transform: translateX(-5%);
+#slogan.in-focus {
+    opacity: 1;
+    transform: translateX(1%);
 }
 
-.about-me {
-    width: 80%;
-    margin: 0 auto;
-    padding: 10px;
+.section-title {
     color: white;
 }
 
-#about-me-title{
-    font-size: 2vw;
+.about-me-container {
+    background-color: #252734;
+    width: 120%;
+    transform: translate(-10%,-10%);
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+
+.about-me {
+    width: 60%;
+    margin: 0 auto;
+    color: white;
 }
 
 #about-me-content {
-    font-size: 1.2vw;
+    font-size: 16px;
 }
+
+.skills-container {
+    width: 74%;
+    margin-left: 11%;
+    margin-right: 11%;
+    margin-bottom: 5%;
+    padding: 20px;
+    color: white;
+    display: inline-block;
+    background: linear-gradient(to bottom, #fec160, #cc6600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#skill-grid {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    text-align: center;
+    gap: 20px;
+
+}
+
+#skill-grid i {
+    color: #ffcc00;
+    font-size: 36px;
+}
+
+.skill-name {
+    font-size: 12px;
+}
+
+.section-title-container {
+    background-color: #252734;
+    width: 110%;
+    transform: translateX(-5%);
+    color: white;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+
+.projects-container {
+    background-color: #252734;
+    width: 120%;
+    transform: translateX(-8%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+    width: 75%;
+    gap: 10%;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #434458;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.project-name {
+    text-align: center;
+    font-size: 24px;
+}
+.project-card p {
+    text-indent: 20px;
+    text-align: left;
+    font-size: 16px;
+}
+
+
+

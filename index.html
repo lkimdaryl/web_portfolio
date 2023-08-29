@@ -1,49 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="./styles/main_style.css">
-  </head>
-  <body>
-    <header>
-      <div class="personal-info">
-        <p id="my-name">Hi!</br>I'm Kim </br>Lim</p>
-        <img id="my-img" src="./imgs/profile_pic.JPG">
-      </div>
-      <div>
-        <nav>
-        <ul>
-          <li><a href="./about_me.html">About</a></li>
-          <li><a href="./portfolio.html">Portfolio</a></li>
-          <li><a href="./contacts">Contact</a></li>
-        </ul>
-        </nav>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="./styles/main_style.css">
+        <script src="./styles/main.js"></script>
+        <script src="https://kit.fontawesome.com/627d3f7cea.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="personal-info">
+                <h1 id="my-name">Hi!</br>I'm Kim </br>Lim</h1>
+                <img id="my-img" src="./imgs/profile_pic.JPG">
+            </div>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="./about_me.html">About</a></li>
+                        <li><a href="./portfolio.html">Portfolio</a></li>
+                        <li><a href="./contacts">Contact</a></li>
+                    </ul>
+                </nav>
 
-        <div class="about-me-info">
-          <p id="title">Creative Developer</p>
-          <p id="slogan">From Lines of Code to Magic on Screen. </br> That's My Thing.</p>
+                <div class="some-info">
+                    <h1 id="title">Creative Developer</h1>
+                    <p id="slogan">From Lines of Code to Magic on Screen. </br> That's My Thing.</p>
+                </div>
+            </div>
+        </header>
+        <div class="about-me-container">
+            <div class="about-me">
+                <h2 class="section-title">About me</h2>
+                <p id="about-me-content">
+                    My journey began by the magic of video games. The allure of virtual worlds and
+                    interactive narratives sparked a fire within me, a fire that propelled me to embark
+                    on a path of innovation and creativity. </br>
+                    I am currently a computer science major student at University of California, learning the fundamentals of
+                    computers whilst honing my skills. The classroom became my laboratory, and every lecture was a revelation,
+                    offering new perspectives and unveiling the intricate machinery that powers the digital world.
+                    These experiences—the classroom and the late-night coding sessions— were all threads weaving
+                    together the tapestry of my growth. And now, here I stand, my portfolio a testament to the milestones I've
+                    reached, the lessons I've learned, and the dreams I've dared to pursue.
+                </p>
+            </div>
         </div>
-      </div>
-    </header>
+        <div class="skills-container">
+            <h2 class="section-title">Skills</h2>
+                <div id="skill-grid">
+                    <div class="skill">
+                        <i class="fab fa-java"></i><br>
+                        <a class="skill-name">Java</a>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-python"></i><br>
+                        <a class="skill-name">Python</a>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-html5"></i><br>
+                        <a class="skill-name">HTML</a>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-css3-alt"></i><br>
+                        <a class="skill-name">CSS</a>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-js"></i><br>
+                        <a class="skill-name">JavaScript</a>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-database"></i><br>
+                        <a class="skill-name">MySQL</a>
+                    </div>
+                    <div class="tool">
+                        <i class="fab fa-java"></i><br>
+                        <a class="skill-name">Eclipse</a>
+                    </div>
+                    <div class="tool">
+                        <i class="fab fa-github"></i><br>
+                        <a class="skill-name">Github</a>
+                    </div>
+                    <div class="tool">
+                        <i class="fab fa-python"></i><br>
+                        <a class="skill-name">PyCharm</a>
+                    </div>
+                    <div class="tool">
+                        <i class="fas fa-code"></i><br>
+                        <a class="skill-name">VSCode</a>
+                    </div>
+                </div>
+        </div>
 
-    <div class="about-me-container">
-      <div class="about-me">
-        <p id="about-me-title">About me</p>
-        <p id="about-me-content">
-          I'm a passionate computer science student, driven by curiosity. My journey began with the enchantment of
-          video games, sparking a desire to craft innovative solutions through lines of code. Every challenge I
-          conquered sharpened my skills, allowing me to shape the very page you're exploring. I'm all about breaking
-          boundaries, blending technical know-how with design instincts to craft immersive experiences.
-          This portfolio is my invitation for you to dive into a world of projects that reflect my dedication
-          and excitement for programming. Come join me, and together, let's uncover the limitless potential that
-          coding holds.
-        </p>
-      </div>
-    </div>
+<!--        <div class="section-title-container">-->
+<!--            <h2 class="section-title"> Selected Work</h2>-->
+<!--        </div>-->
+        <div class="projects-container">
+            <h2 class="section-title"> Selected Work</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h2 class="project-name">Restaurant Management System</h2>
+                    <p>The Restaurant Management System is a dynamic web application I developed as
+                        part of an engineering class project. Built using FastAPI and MySQL, this system
+                        streamlines restaurant operations by facilitating menu item management and order
+                        processing. Its interface is user-friendly and leverages RESTful APIs to manage
+                        menu items and orders efficiently. Furthermore, I integrated some error handling mechanisms
+                        to enhance the application's reliability.
+                    </p>
+                    <button class="source-link">View Source</button>
+                </div>
+                <div class="project-card">
+                    <h2 class="project-name">Project 2</h2>
+                    <p>Description for Project 2</p>
+                </div>
+            </div>
+        </div>
+
+
 <!--    <footer>-->
 <!--      <p>&copy; 2023 My Portfolio</p>-->
 <!--    </footer>-->
-  </body>
+    </body>
 </html>
