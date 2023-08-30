@@ -4,69 +4,22 @@ body{
 }
 
 header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.personal-info {
-    position: relative;
-    width: 100%;
-}
-
-#my-name {
-    position: absolute;
-    z-index: 2;
-    color: #fec160;
-    font-size: 72px;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-top: 10%;
-    margin-left: 20%;
-    transform: translate(10%, 0%);
-    opacity: 0;
-    transform: translateX(-20%);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-}
-
-#my-name.in-focus {
-    opacity: 1;
-    transform: translateX(10%);
-}
-
-#my-img {
-    position: relative;
-    height: auto;
-    min-width: 300px;
-    width: 50%;
-    margin-left:50%;
-    margin-top: 6%;
-    border-radius: 70%;
-    z-index: 1;
-    opacity: 0;
-    transform: translateY(10%);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    mix-blend-mode: luminosity;
-}
-#my-img.in-focus {
-    opacity: 1;
-    transform: translateY(-2%);
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
 }
 
 nav ul {
-    position: relative;
     list-style-type: none;
-    margin: 20px;
-    padding: 0;
     display: flex;
-    justify-content: center;
-    gap: 25%;
+    padding: 0;
+    gap: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
 
 nav li {
-    display: inline;
+    margin-right: 50px;
 }
 
 nav a {
@@ -80,12 +33,54 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.some-info p {
+.profile-section {
+    display: flex;
+}
+
+.name-image-section {
     position: relative;
-    margin-top: 10%;
-    margin-left: 15%;
-    color: white;
+    width: 50%;
+}
+
+#my-name {
+    position: absolute;
     z-index: 2;
+    color: #fec160;
+    font-size: 64px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-left: 20%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+#my-name.in-focus {
+    opacity: 1;
+    transform: translateX(10%);
+}
+
+#my-img {
+    position: relative;
+    height: auto;
+    min-width: 300px;
+    max-width: 350px;
+    width: 60%;
+    margin-left:50%;
+    border-radius: 70%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    mix-blend-mode: luminosity;
+}
+#my-img.in-focus {
+    opacity: 1;
+    transform: translateY(-5%);
+}
+
+.title-slogan-section {
+    color: white;
+    z-index: 1;
 }
 
 #title {
@@ -106,16 +101,19 @@ nav a:hover {
 }
 
 #slogan {
+    position: relative;
     font-size: 24px;
+    z-index: 2;
+    margin-top: 10%;
+    transform: translateX(20%);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     opacity: 0;
-    transform: translateX(15%);
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 #slogan.in-focus {
     opacity: 1;
-    transform: translateX(1%);
+    transform: translateX(15%);
 }
 
 .section-title {
@@ -125,7 +123,7 @@ nav a:hover {
 .about-me-container {
     background-color: #252734;
     width: 120%;
-    transform: translate(-10%,-10%);
+    transform: translateX(-10%);
     padding-top: 20px;
     padding-bottom:20px;
 }
