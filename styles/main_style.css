@@ -160,15 +160,25 @@ nav a:hover {
     -webkit-text-fill-color: transparent;
 }
 
-#skill-grid {
-    display: grid;
-    grid-template-columns: repeat(11, 1fr);
+.skill-grid {
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
-    gap: 20px;
-
+    align-items: center;
 }
 
-#skill-grid i {
+.category {
+    border: 2px solid orange;
+    padding: 20px;
+    width: 110px;
+}
+
+.skill {
+    margin: 20px;
+}
+
+.skill-grid i {
+    display: flex;
     color: #ffcc00;
     font-size: 36px;
 }
@@ -190,25 +200,25 @@ nav a:hover {
 .projects-container {
     background-color: #252734;
     width: 120%;
-    transform: translateX(-8%);
+    transform: translateX(-10%);
     color: white;
     text-align: center;
     padding: 20px;
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 900px;
-    width: 75%;
-    gap: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
     margin: 0 auto;
 }
 
 .project-card {
     background-color: #434458;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    padding: 10px;
+    width: 50%;
+    margin: 40px;
+    padding: 20px;
 }
 
 .project-name {
