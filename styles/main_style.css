@@ -231,7 +231,8 @@ nav a:hover {
 }
 
 .project-card {
-    width: 400px;
+    width: 50%;
+    min-width: 300px;
     margin: 40px;
 }
 

@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var myImage = document.querySelector('#my-img');
-    myImage.classList.add('in-focus');
+
+    setTimeout(function() {
+        var myImage = document.querySelector('#my-img');
+        myImage.classList.add('in-focus');
+    }, 100);
 
     setTimeout(function() {
         var myName = document.querySelector('#my-name');
