@@ -1,15 +1,11 @@
+/*
 @media (max-width: 768px) {
     html, body {
-        overflow-x: hidden; /* Hide horizontal scrollbar */
+        overflow-x: hidden;
     }
+}*/
 
-    #my-img {
-        min-width: 200px;
-        max-width: 300px;
-    }
-}
-
-body{
+html, body{
     background-color: #333647;
     overflow-x: hidden;
     margin: 0;
