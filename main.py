@@ -46,10 +46,10 @@ async def send_message(request: Request):
 
   load_dotenv("api.env")
   sg = sendgrid.SendGridAPIClient(api_key=os.environ.get('SENDGRID_API_KEY'))
-  print(f'API Key: {os.environ.get("SENDGRID_API_KEY")}')
+  # print(f'API Key: {os.environ.get("SENDGRID_API_KEY")}')
 
-  from_email = Email("lkimdaryl@gmail.com")
-  to_email = To("lkimdaryl@gmail.com")
+  from_email = Email(os.environ.get("EMAIL"))
+  to_email = To(os.environ.get("EMAIL"))
   subject = f"Message by: {form_data['name']}"
   content = Content("text/plain", form_data['message'])
   mail = Mail(from_email, to_email, subject, content)
