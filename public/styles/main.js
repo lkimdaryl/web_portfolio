@@ -25,12 +25,16 @@ document.addEventListener("DOMContentLoaded", function() {
         window.open('https://github.com/lkimdaryl/Restaurant_Management_System', '_blank')
     });
 
+    var SBBttn = document.querySelector('#SB-bttn');
+    SBBttn.addEventListener('click', event => {
+        window.open('https://github.com/lkimdaryl/SecureBand', '_blank')
+    })
+
     const form = document.querySelector("form");
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
         const formData = JSON.stringify(Object.fromEntries(new FormData(form)));
-//        console.log(formData);
         const url = form.action;
 
         fetch(url, {
@@ -44,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then((response) => response.json())
         .then((data) => {
-//            console.log(data);
             showNotification(data['Status']);
         })
         .catch((error) => {
@@ -55,11 +58,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function showNotification(status){
     const form = document.getElementById("messageForm");
+    const nameInput = document.getElementById("name");
     const messageTextarea = document.getElementById("message");
     const notification = document.getElementById("notification");
     if (status === "Success"){
         messageTextarea.value = "";
         messageTextarea.placeholder = "";
+        nameInput.value = "";
         notification.textContent = "Message Sent Successfully!";
         notification.classList.add("show-success");
         setTimeout(function () {
@@ -69,6 +74,7 @@ function showNotification(status){
     }else{
         messageTextarea.value = "";
         messageTextarea.placeholder = "";
+        nameInput.value = "";
         notification.textContent = "Sending Message Failed.";
         notification.classList.add("show-fail");
         setTimeout(function () {
