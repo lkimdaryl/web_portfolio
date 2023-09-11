@@ -20,7 +20,7 @@ def get_html() -> HTMLResponse:
 @app.post("/send_message")
 async def send_message(request: Request):
   form_data =await request.json()
-  sg_api_key = "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"
+  sg_api_key = ""
   sg = sendgrid.SendGridAPIClient(api_key=sg_api_key)
 
   from_email = Email("lkimdaryl@gmail.com")
