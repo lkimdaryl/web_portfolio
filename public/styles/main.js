@@ -20,6 +20,11 @@ document.addEventListener("DOMContentLoaded", function() {
         slogan.classList.add('in-focus');
     }, 1500);
 
+    var MVPBttn = document.querySelector('#MVP-bttn');
+    MVPBttn.addEventListener('click', event => {
+        window.open('https://github.com/lkimdaryl/MVPIdeation', '_blank')
+    })
+
     var RMSBttn = document.querySelector('#RMS-bttn');
     RMSBttn.addEventListener('click', event => {
         window.open('https://github.com/lkimdaryl/Restaurant_Management_System', '_blank')
