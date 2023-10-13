@@ -9,6 +9,7 @@ html, body{
     background-color: #333647;
     overflow-x: hidden;
     margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
 }
 
@@ -133,7 +134,7 @@ nav a:hover {
 
 .about-me-container {
     background-color: #252734;
-    width: MediaQuery.of(context).size.width;
+    width: 100%;
     padding-top: 20px;
     padding-bottom:20px;
 }
